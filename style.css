@@ -1,0 +1,150 @@
+:root {
+    --primary: #00b4d8;
+    --secondary: #0077b6;
+    --dark: #03045e;
+    --light: #caf0f8;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--dark);
+    line-height: 1.8;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 8%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0; width: 100%; z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.logo { font-size: 1.6rem; font-weight: 700; color: var(--secondary); }
+.logo span { color: var(--primary); }
+.nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; transition: var(--transition); }
+.nav-links a:hover { color: var(--primary); }
+
+.btn-nav {
+    background: var(--primary);
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(3, 4, 94, 0.6), rgba(0, 180, 216, 0.4)), 
+                url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover; background-position: center;
+    display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 10%;
+}
+
+.hero-content {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 50px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--white);
+    max-width: 800px;
+}
+
+.hero-content h1 { font-size: 3.5rem; margin-bottom: 20px; line-height: 1.2; }
+.hero-btns { display: flex; gap: 20px; justify-content: center; margin-top: 30px; }
+
+/* Buttons */
+.btn-main, .btn-secondary {
+    padding: 12px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: var(--transition);
+}
+.btn-main { background: var(--primary); color: white; border: none; cursor: pointer; }
+.btn-main:hover { background: var(--secondary); transform: translateY(-3px); }
+.btn-secondary { background: transparent; color: white; border: 2px solid white; }
+.btn-secondary:hover { background: white; color: var(--primary); }
+
+/* Stats */
+.stats {
+    display: flex; justify-content: space-around; padding: 60px 10%;
+    background: var(--light); text-align: center;
+}
+.stat-item h2 { font-size: 2.5rem; color: var(--secondary); }
+
+/* Services */
+.services { padding: 100px 10%; text-align: center; }
+.services-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; margin-top: 50px;
+}
+.service-card {
+    background: white; padding: 40px; border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: var(--transition);
+}
+.service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,180,216,0.15); }
+.service-card i { font-size: 3.5rem; color: var(--primary); margin-bottom: 20px; }
+
+/* Booking Form */
+.booking { background: #f8f9fa; padding: 100px 10%; display: flex; justify-content: center; }
+.booking-container { background: white; padding: 50px; border-radius: 30px; width: 100%; max-width: 600px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+.input-group { margin-bottom: 20px; }
+input, select { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 10px; font-size: 1rem; }
+.full-width { width: 100%; margin-top: 10px; }
+
+/* WhatsApp */
+.whatsapp-float {
+    position: fixed; bottom: 30px; left: 30px; background: #25d366; color: white;
+    padding: 15px 25px; border-radius: 50px; display: flex; align-items: center; gap: 10px;
+    text-decoration: none; font-weight: bold; z-index: 1000; box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Reveal Animation */
+.reveal { opacity: 0; transform: translateY(40px); transition: 1s all ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+/* Doctors Styling */
+.doctors { padding: 80px 10%; background: #fff; text-align: center; }
+.doctors-grid {
+    display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 40px;
+}
+.doctor-card { width: 280px; text-align: center; }
+.doctor-img {
+    position: relative; overflow: hidden; border-radius: 20px; margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.doctor-img img { width: 100%; transition: var(--transition); display: block; }
+
+/* الـ Details اللي بتبهر: ظهور أيقونات السوشيال ميديا عند الوقوف على الصورة */
+.social-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 180, 216, 0.7); display: flex; justify-content: center;
+    align-items: center; gap: 15px; opacity: 0; transition: var(--transition);
+}
+.social-overlay a { color: white; font-size: 1.5rem; }
+.doctor-img:hover .social-overlay { opacity: 1; }
+.doctor-img:hover img { transform: scale(1.1); }
+
+/* Footer Styling */
+footer { background: var(--dark); color: white; padding: 60px 10% 20px; }
+.footer-content {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 40px;
+}
+.footer-info p { font-size: 0.9rem; margin-top: 15px; opacity: 0.8; }
+.footer-links ul { list-style: none; margin-top: 15px; }
+.footer-links a { color: white; opacity: 0.7; text-decoration: none; transition: var(--transition); }
+.footer-links a:hover { opacity: 1; padding-right: 10px; color: var(--primary); }
+.footer-bottom { text-align: center; padding-top: 20px; font-size: 0.8rem; opacity: 0.6; }

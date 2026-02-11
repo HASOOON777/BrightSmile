@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Smile | عيادة الأسنان الحديثة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo"><i class="fas fa-tooth"></i> Bright<span>Smile</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#doctors">أطباؤنا</a></li>
+                <li><a href="#booking" class="btn-nav">احجز موعدك</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content reveal">
+            <h1>ابتسامة أحلامك تبدأ من هنا</h1>
+            <p>نحن نجمع بين الخبرة الطبية وأحدث التكنولوجيا لنقدم لك أفضل تجربة علاجية لأسنانك.</p>
+            <div class="hero-btns">
+                <a href="#services" class="btn-secondary">استكشف خدماتنا</a>
+                <a href="#booking" class="btn-main">احجز الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stat-item">
+            <h2 class="counter" data-target="2500">0</h2>
+            <p>حالة ناجحة</p>
+        </div>
+        <div class="stat-item">
+            <h2 class="counter" data-target="12">0</h2>
+            <p>طبيب متخصص</p>
+        </div>
+        <div class="stat-item">
+            <h2 class="counter" data-target="15">0</h2>
+            <p>سنة خبرة</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2 class="section-title">خدماتنا المتميزة</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-wand-magic-sparkles"></i>
+                <h3>تبييض احترافي</h3>
+                <p>استخدام أحدث أجهزة الليزر للحصول على بياض ناصع في أقل من ساعة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-vial"></i>
+                <h3>زراعة فورية</h3>
+                <p>تعويض الأسنان المفقودة بأجود الخامات الألمانية مع ضمان مدى الحياة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-user-shield"></i>
+                <h3>تقويم غير مرئي</h3>
+                <p>حلول تقويمية ذكية لا تؤثر على مظهرك اليومي وتمنحك نتائج مذهلة.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="doctors" class="doctors">
+        <h2 class="section-title">نخبة من الأطباء</h2>
+        <div class="doctors-grid">
+            <div class="doctor-card">
+                <div class="doctor-img">
+                    <img src="D:\عيادتي\Ramy-Elsamman.jpg" alt="دكتور أحمد">
+                    <div class="social-overlay">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <h3>د. أحمد كمال</h3>
+                <p>أخصائي جراحة وتجميل الأسنان</p>
+            </div>
+            <div class="doctor-card">
+                <div class="doctor-img">
+                    <img src="D:\عيادتي\دكتورة-سارة-الغريب.jpg" alt="دكتورة سارة">
+                    <div class="social-overlay">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <h3>د. سارة محمود</h3>
+                <p>أخصائية تقويم الأسنان</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="booking">
+        <div class="booking-container reveal">
+            <h2>احجز استشارتك المجانية</h2>
+            <form id="appointmentForm">
+                <div class="input-group">
+                    <input type="text" id="userName" placeholder="الاسم بالكامل" required>
+                </div>
+                <div class="input-group">
+                    <input type="tel" id="userPhone" placeholder="رقم الموبايل (11 رقم)" required>
+                </div>
+                <div class="input-group">
+                    <select id="serviceType">
+                        <option value="تبييض">تبييض أسنان</option>
+                        <option value="زراعة">زراعة أسنان</option>
+                        <option value="تقويم">تقويم</option>
+                        <option value="كشف عام">كشف عام</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-main full-width">تأكيد الحجز الآن</button>
+            </form>
+            <div id="formMessage"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="logo"><i class="fas fa-tooth"></i> Bright<span>Smile</span></div>
+                <p>عيادة متخصصة تقدم أفضل الخدمات الطبية بأحدث المعايير العالمية لضمان راحتك وسلامتك.</p>
+            </div>
+            <div class="footer-links">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#doctors">الأطباء</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>تواصل معنا</h4>
+                <p><i class="fas fa-phone"></i> +20 1032644676</p>
+                <p><i class="fas fa-envelope"></i> info@brightsmile.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 جميع الحقوق محفوظة - تم التطوير بواسطة حسن سعيد</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/201234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>للحجز السريع</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
